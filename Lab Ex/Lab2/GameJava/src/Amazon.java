@@ -1,6 +1,6 @@
-public class Paladin extends Character implements IDefendable,IHealable{
-    Paladin(String name) {
-        super(name, 100, 40, HeroRaceEnum.Human);
+public class Amazon extends Character implements IDefendable,IHealable{
+    Amazon(String name) {
+        super(name, 100, 20, HeroRaceEnum.Elf);
     }
 
     @Override
@@ -11,13 +11,13 @@ public class Paladin extends Character implements IDefendable,IHealable{
 
     @Override
     public void defend(int attackPower) {
-        System.out.println("Is protected by holy grail!");
+        System.out.printf("%s protected! \n", this.getName());
         this.setHealth(this.getHealth()-attackPower);
     }
 
     @Override
     public void heal(Character c) {
-        System.out.println("Healed by 10");
-        this.setHealth(this.getHealth()+10);
+        System.out.println("Healed by 20");
+        this.setHealth(this.getHealth()+20);
     }
 }

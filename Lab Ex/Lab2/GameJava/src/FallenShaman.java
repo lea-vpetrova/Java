@@ -1,6 +1,11 @@
-public class Butcher extends Monster implements IAttackable{
-    Butcher(String name) {
-        super(name, 100, 25, MonsterTypeEnum.Human);
+public class FallenShaman extends Monster implements IAttackable{
+    FallenShaman(String name) {
+        super(name, 100, 50, MonsterTypeEnum.Shaman);
+    }
+
+    @Override
+    public void takeDamage(int damage) {
+
     }
 
     @Override
@@ -12,10 +17,5 @@ public class Butcher extends Monster implements IAttackable{
 
             c.setHealth(c.getHealth()-this.getPower());
         }
-    }
-
-    @Override
-    public void takeDamage(int damage) {
-
     }
 }

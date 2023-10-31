@@ -1,5 +1,7 @@
 public enum MonsterTypeEnum {
     Goblin,
     Shaman,
-    Dragon
+    Dragon,
+    Human,
+    Skeleton
 }
