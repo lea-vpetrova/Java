@@ -36,11 +36,14 @@ abstract public class Monster {
         this.race = race;
     }
 
-    Monster(String name, int power, int health, MonsterTypeEnum race){
+    Monster(String name, int health, int power, MonsterTypeEnum race){
         this.name = name;
         this.health = health;
         this.power = power;
         this.race = race;
     }
     abstract void attackChar(Character c);
+    public boolean isAlive(){
+        return this.getHealth() > 0;
+    }
 }

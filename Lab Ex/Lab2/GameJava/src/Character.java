@@ -48,5 +48,9 @@ abstract public class Character {
     }
 
     abstract void attackMonster(Monster m);
-    abstract void defend(int attackPower);
+
+
+    public boolean isAlive(){
+        return this.getHealth() > 0;
+    }
 }
