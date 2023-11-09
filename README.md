@@ -10,4 +10,4 @@ In the folder "Lab Ex":
 - folder "Lab3":
   - CosmoGame
 - folder "ExamPrep":
-  -ExamTest(first)
+  - ExamTest(first)
