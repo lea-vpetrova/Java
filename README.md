@@ -6,4 +6,8 @@ In the folder "Lab Ex":
   - Easy exercises from 1 to 15
   - Mid-level exercises 5,6,7
 - folder "Lab2":
-  - Game exercise 
+  - Game exercise
+- folder "Lab3":
+  - CosmoGame
+- folder "ExamPrep":
+  -ExamTest(first)
