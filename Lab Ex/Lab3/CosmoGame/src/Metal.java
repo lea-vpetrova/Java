@@ -8,3 +8,4 @@ public class Metal extends Resource{
 
     }
 }
+

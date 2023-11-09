@@ -1,6 +1,8 @@
-public class Gas extends Resource{
-    Gas(double amount) {
+public class Gas extends Resource {
+    public Gas(double amount) {
         super(amount, 0.5);
+        {
+        }
     }
 
     @Override

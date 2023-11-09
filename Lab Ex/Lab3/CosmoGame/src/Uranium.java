@@ -1,5 +1,5 @@
 public class Uranium extends Resource{
-    Uranium(double amount) {
+    public Uranium(double amount) {
         super(amount, 0.1);
     }
 
