@@ -1,15 +1,15 @@
 public class CreateEvent {
-    private static String typeOfEvent;
+    private  String typeOfEvent;
 
-    public static ICompetition getEvent(String competitionType) throws Exception{
+    public ICompetition getEvent(String competitionType) throws Exception{
          switch (competitionType) {
-            case "football":
+            case "FootballMatch":
                 typeOfEvent = competitionType;
                 return new FootballMatch();
-            case "horse race":
+            case "HorseRace":
                 typeOfEvent = competitionType;
                 return new HorseRace();
-            case "formula 1":
+            case "Formula1Race":
                 typeOfEvent = competitionType;
                 return new Formula1Race();
             default:
@@ -17,7 +17,7 @@ public class CreateEvent {
         }
     }
 
-    public static void fillSchedule(ICompetition ob, Participant[] schedule) throws Exception {
+    public void fillSchedule(ICompetition ob, Participant[] schedule) throws Exception {
         switch (typeOfEvent) {
             case "FootballMatch":
                 schedule = ((FootballMatch) ob).getSchedule();
@@ -32,19 +32,5 @@ public class CreateEvent {
         if (schedule.length == 0) {
             throw new EmptySetException("Empty set!");
         }
-    }
-
-    static void bets(ICompetition ob,int id, double bet){
-        Participant[] schedule = ob.getSchedule();
-        Participant person = schedule[id-1];
-
-        double previousBetForWin = person.getBetToWin();
-        double previousOddsToWin = person.getChanceToWin();
-
-        double newBetForWin = (previousBetForWin + bet) / previousBetForWin;
-        person.setBetToWin(newBetForWin);
-
-        double newOddsToWin = Math.max(previousOddsToWin - (bet / previousBetForWin), 1.1); //Math.max ???
-        person.setChanceToWin(newOddsToWin);
     }
 }
