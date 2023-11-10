@@ -13,5 +13,19 @@ public class Participant {
         this.chanceToWin = chanceToWin;
     }
 
+    public double getBetToWin() {
+        return betToWin;
+    }
 
+    public void setBetToWin(double betToWin) {
+        this.betToWin = betToWin;
+    }
+
+    public double getChanceToWin() {
+        return chanceToWin;
+    }
+
+    public void setChanceToWin(double chanceToWin) {
+        this.chanceToWin = chanceToWin;
+    }
 }

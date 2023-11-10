@@ -33,4 +33,18 @@ public class CreateEvent {
             throw new EmptySetException("Empty set!");
         }
     }
+
+    public static void bets(ICompetition ob, int id, double bet){
+        Participant[] schedule = ob.getSchedule();
+
+        Participant person = schedule[id - 1];
+        double previousBetForWin = person.getBetToWin();
+        double previousOddsToWin = person.getChanceToWin();
+
+        double newBetForWin = (previousBetForWin + bet) / previousBetForWin;
+        double newOddsToWin = Math.max(previousOddsToWin - (bet / previousBetForWin), 1.05);
+
+        person.setBetToWin(newBetForWin);
+        person.setChanceToWin(newOddsToWin);
+    }
 }
