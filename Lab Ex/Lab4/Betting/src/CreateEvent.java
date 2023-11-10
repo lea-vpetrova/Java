@@ -1,7 +1,7 @@
 public class CreateEvent {
-    private  String typeOfEvent;
+    private static String typeOfEvent;
 
-    public ICompetition getEvent(String competitionType) throws Exception{
+    public static ICompetition getEvent(String competitionType) throws EventException{
          switch (competitionType) {
             case "FootballMatch":
                 typeOfEvent = competitionType;
@@ -17,7 +17,10 @@ public class CreateEvent {
         }
     }
 
-    public void fillSchedule(ICompetition ob, Participant[] schedule) throws Exception {
+    public static void fillSchedule(ICompetition ob, Participant[] schedule) throws EmptySetException {
+        if (schedule.length == 0) {
+            throw new EmptySetException("Empty set!");
+        }
         switch (typeOfEvent) {
             case "FootballMatch":
                 schedule = ((FootballMatch) ob).getSchedule();
@@ -29,9 +32,7 @@ public class CreateEvent {
                 schedule = ((Formula1Race) ob).getSchedule();
                 break;
         }
-        if (schedule.length == 0) {
-            throw new EmptySetException("Empty set!");
-        }
+
     }
 
     public static void bets(ICompetition ob, int id, double bet){
