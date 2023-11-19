@@ -9,5 +9,9 @@ In the folder "Lab Ex":
   - Game exercise
 - folder "Lab3":
   - CosmoGame
+- folder "Lab4":
+  - Betting program
+- folder "Lab5"
+  - regex and files exercises
 - folder "ExamPrep":
   - ExamTest(first)
